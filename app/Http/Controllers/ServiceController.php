@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
+use App\Models\Site;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -24,7 +25,8 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+        $sitios = Site::All();
+        return view('services.create',compact('sitios'));
     }
 
     /**

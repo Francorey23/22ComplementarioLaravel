@@ -22,6 +22,8 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('sitio_id')->nullable();
             $table->foreign('sitio_id')->references('id')->on('sites');
+            $table->unsignedBigInteger('servicio_id')->nullable();
+            $table->foreign('servicio_id')->references('id')->on('services');
             $table->timestamps();
         });
     }
